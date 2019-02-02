@@ -23,6 +23,9 @@ REST API to list files from a repository and get content of files
 
 ## Launch it with Docker
 This api is available with a Dockerfile to be launch as standalone with Docker.
+
 To use it : 
+
 `docker build --tag apifiles .`
+
 `docker run -p 8080:80 -v /pathToHostWeWantToExpose:/files apifiles`
