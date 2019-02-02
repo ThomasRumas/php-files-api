@@ -1,5 +1,5 @@
 <?php
     return array(
-        'path' => '../ressources'
+        'path' => '/files'
     )
 ?>
