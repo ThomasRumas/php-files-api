@@ -9,7 +9,7 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 
 RUN mkdir /files
 RUN chmod u+x /files
-WORKDIR /var/www/html
+#WORKDIR /var/www/html
 
 COPY entrypoint.sh /
 RUN dos2unix /entrypoint.sh
