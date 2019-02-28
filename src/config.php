@@ -1,5 +1,5 @@
 <?php
-    return array(
+    $configs = array(
         'path' => '/files'
     )
 ?>
