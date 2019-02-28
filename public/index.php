@@ -4,29 +4,6 @@
 
     require_once __DIR__ . '/../src/functions.php';
 
-    // Default index page
-    route('GET', '^/$', function() {
-        echo '<a href="users">List users</a><br>';
-    });
-
-    // GET request to /users
-    route('GET', '^/users$', function() {
-        echo '<a href="users/1000">Show user: 1000</a>';
-    });
-
-    // With named parameters
-    route('GET', '^/users/(?<id>\d+)$', function($params) {
-        echo "You selected User-ID: ";
-        var_dump($params);
-    });
-
-    // POST request to /users
-    route('POST', '^/users$', function() {
-        header('Content-Type: application/json');
-        $json = json_decode(file_get_contents('php://input'), true);
-        echo json_encode(['result' => 1]);
-    });
-
     route('GET', '^/all$', function() {
         try {
             $arraySvg = scandir('/files');
@@ -47,7 +24,7 @@
         }
     }); 
 
-    route('GET', '^/get/(?<folder>\d+)/(?<file>\d+)$', function($params) {
+    route('GET', '^/get/(?<folder>\w+)/(?<file>\X+)$', function($params) {
         var_dump($params);
         try {
             $file = file_get_contents('/files' . '/' . $params['folder'] . '/' . $params['file']);
