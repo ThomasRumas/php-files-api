@@ -3,11 +3,11 @@ REST API to list files from a repository and get content of files
 
 ## Exposed methods
 * /all -> Return folders and files
-* /get/<folder>/<file> -> Return content of files (works on HTML, SVG, TXT...) 
+* /get/folderName/fileName -> Return content of files (works on HTML, SVG, TXT...) 
 
 /files/get.php need two parameters : 
-* folder -> The folder name, ex: html
-* file -> The file you want to get, ex: mySvg.svg
+* folderName -> The folder name, ex: html
+* fileName -> The file you want to get, ex: mySvg.svg
 
 ## Example result 
 /all : 
