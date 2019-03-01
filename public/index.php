@@ -24,8 +24,7 @@
         }
     }); 
 
-    route('GET', '^/get/(?<folder>\w+)/(?<file>\X+)$', function($params) {
-        var_dump($params);
+    route('GET', '^/get/(?<folder>\X+)/(?<file>\X+)$', function($params) {
         try {
             $file = file_get_contents('/files' . '/' . $params['folder'] . '/' . $params['file']);
             if($file == false) {
