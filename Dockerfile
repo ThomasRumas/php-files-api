@@ -14,6 +14,7 @@ RUN chmod u+x /files
 COPY entrypoint.sh /
 RUN dos2unix /entrypoint.sh
 RUN chmod u+x /entrypoint.sh
+RUN a2enmod rewrite
 
 EXPOSE 80
 VOLUME [ "/files" ]
