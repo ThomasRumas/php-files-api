@@ -2,15 +2,15 @@
 REST API to list files from a repository and get content of files
 
 ## Exposed methods
-* /files/all.php -> Return folders and files
-* /files/get.php -> Return content of files (works on HTML, SVG, TXT...) 
+* /all -> Return folders and files
+* /get/<folder>/<file> -> Return content of files (works on HTML, SVG, TXT...) 
 
 /files/get.php need two parameters : 
 * folder -> The folder name, ex: html
 * file -> The file you want to get, ex: mySvg.svg
 
 ## Example result 
-/files/all.php : 
+/all : 
 `{
     "michel": [
         "Hop_Into_Spring.svg"
@@ -18,7 +18,7 @@ REST API to list files from a repository and get content of files
     "test": []
 }`
 
-/files/get.php : 
+/get/<folder>/<file> : 
 `"Hello World"`
 
 ## Launch it with Docker
